@@ -47,3 +47,23 @@ git checkout -b <"Nome da branch pra ser criada"> <"Nome da branch de referencia
 git push
 ````
 Com esse comando, vamos enviar todas as alterações/commits que fizemos dentro do nosso repositório local diretamente para o nosso repositório remoto, que pode ser por exemplo um GitBucket ou um AzureDevOps
+
+### Recebendo mudanças do repositorio remoto
+````sh
+git pull
+````
+Muitas vezes a gente pode trabalhar em projetos em que colegas tambem estão desenvolvendo em branches separados. Quando algum colega acaba de desenvolver primeiro que voce e da um push para o repositorio remoto, todas as alterações vão ficar pendentes de merge quando voce subir para o seu repositorio, caso tenham mexido na mesma linha de codigo em branches diferentes. A ação de sincronizar seu branch local com o repositorio remoto é feita através do comando git pull.
+
+### Clonando Repositórios
+````sh
+git clone <linkRepositorio>
+````
+
+### Removendo arquivos do repositório
+````sh
+git rm <arquivo>
+````
+### Removendo arquivo git do repositorio
+````sh
+git rm .git -force
+````
