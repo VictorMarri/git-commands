@@ -67,3 +67,38 @@ git rm <arquivo>
 ````sh
 git rm .git -force
 ````
+
+### Verificando alterações dos ultimos commits via Log
+````sh
+git log
+````
+Com esse comando conseguimos ver todos os ultimos commits feitos, a data, hora e a mensagem que foi inserida no commit.
+
+### Movendo e Renomeando arquivos
+````sh
+
+//Movendo arquivo:
+git mv <arquivoParaMover> <destinoDoArquivo>
+
+ou
+
+//Renomeando arquivo:
+git mv <arquivoParaRenomear> <novoNome>
+````
+
+### Defazendo alterações
+````sh
+git checkout
+````
+Vamos supor que a gente alterou um arquivo, e depois percebemos que nao deveriamos ter alterado ele. Bom, teoricamente a gente pode ir no arquivo dar um CTRL + Z até voltar ao estado antigo. Mas acontece que, se voce der um Git Status, o arquivo ainda sim vai aparecer como sendo alterado. Isso gera desconforto pq vc n sabe exatamente o que ta alterado ali em relação ao arquivo original. Esse comando reverte todas as alterações ao ponto de não aparecer mais nada ao dar um git status.
+
+### Ignorando arquivos no projeto
+````sh
+.gitignore
+````
+O Arquivo .gitignore contem todos os arquivos que não devem entrar no versionamento quando dermos o push. Esses arquivos provavelmente carregam informações sensíveis como chaves de API, variáveis de ambiente, arquivos gerados automaticamente (npm modules por ex) etc.
+
+### Desfazendo TODAS as alterações de uma Branch (Incluindo os commits)
+````sh
+git reset --hard
+````
