@@ -29,6 +29,8 @@ ou
 
 git commit -a -m "mensagem de commit" -> Nessa forma não precisamos mais fazer o comando Git Add. antes.
 
+ou
+
 git commit <nomeDoAquivo.extensao> -m "Mensagem do commit"
 ````
 
